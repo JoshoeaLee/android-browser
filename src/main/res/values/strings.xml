@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">WebBrowser</string>
+
+    <!--History/Bookmarks Empty ListViews-->
+    <string name="empty_list">No Entries</string>
+    <string name="empty_history">No History Present</string>
+    <string name="empty_bookmarks">No Bookmarks Present</string>
+
+    <!--Tabs Badge-->
+    <string name="tab_number">Tab Number </string>
+
+    <!--Toast Messages-->
+    <string name="bookmark_success">Bookmark Successful!</string>
+    <string name="bookmark_failure">This page has already been bookmarked</string>
+    <string name="back_failure">Can\'t go any further back</string>
+    <string name="forward_failure">Can\'t go any further forward</string>
+    <string name="new_home">This is your new home page</string>
+
+
+    <!--Menu Strings-->
+
+    <!--Settings-->
+    <string name="bookmark_string">Bookmarks</string>
+    <string name="history_string">History</string>
+    <string name="home_string">Set Home Page</string>
+    <string name="dark_string">Toggle Dark WebView</string>
+    <string name="plus_text_string">Increase Text Size</string>
+    <string name="minus_text_string">Decrease Text Size</string>
+
+    <!--Tabs-->
+    <string name="new_tab_string">New Tab</string>
+    <string name="close_tab_string">Close Tab</string>
+    <string name="see_tab_string">See Tabs</string>
+
+
+</resources>

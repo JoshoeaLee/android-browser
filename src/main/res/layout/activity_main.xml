@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText"
+    style="@style/BAR"
+    >
+
+
+
+    <!-- Top Search Bar-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/search_background"
+        android:id="@+id/search_bar">
+
+        <!--Bookmark-->
+        <ImageView
+            android:id="@+id/not_bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_bookmark_border_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <!--Search Bar-->
+        <EditText
+            android:id="@+id/url_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="18dp"
+            android:layout_toStartOf="@id/cancelIcon"
+            android:layout_toEndOf="@id/not_bookmark"
+            android:background="@null"
+            android:hint="Search Here"
+            android:imeOptions="actionGo"
+            android:inputType="textUri"
+            android:singleLine="true"
+            android:textSize="14dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!--Cancel Button-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_baseline_cancel_24"
+            android:id="@+id/cancelIcon"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <!-- Divider-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E1E1E1"
+        android:layout_below="@id/search_bar"
+        android:id="@+id/divider_search" />
+    
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:id="@+id/loading_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_below="@id/search_bar"
+        android:visibility="invisible"/>
+
+    <!--Actual Important Bit-->
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/joshView"
+        android:layout_below="@id/divider_search"
+        android:layout_above="@id/divider_nav"/>
+
+    <!-- Divider-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E1E1E1"
+        android:layout_above="@id/my_navbar"
+        android:id="@+id/divider_nav" />
+
+
+    <!--Navigation Bar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/my_navbar"
+        style="@style/BAR"
+
+        >
+
+        <!--NavBar Items-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/back_button"
+            style="@style/ICON"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/forward_button"
+            style="@style/ICON"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_home_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/home_button"
+            style="@style/ICON"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_refresh_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/refresh_button"
+            style="@style/ICON"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_settings_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/settings_button"
+            style="@style/ICON"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:id="@+id/tabs_button"
+                android:src="@drawable/ic_baseline_tab_24" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/badge"
+                android:gravity="center"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:translationY="5dp"
+                android:id="@+id/tab_number"/>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

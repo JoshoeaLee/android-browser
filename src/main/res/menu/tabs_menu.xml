@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/new_tab"
+        android:title="@string/new_tab_string"
+        />
+
+    <item android:id="@+id/close_tab"
+        android:title="@string/close_tab_string"/>
+
+    <item android:id="@+id/see_tab"
+        android:title="@string/see_tab_string"/>
+
+
+</menu>
